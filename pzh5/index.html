@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pzh5</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    //coze
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+    <script>
+      const cozeWebSDK = new CozeWebSDK.WebChatClient({
+        config: {
+          bot_id: '7586195681237909556',
+        },
+        componentProps: {
+          title: '助手',
+          layout: {
+            width: '300px',
+            height: '500px'
+          }
+        },
+        auth: {
+          type: 'token',
+          token: '',
+          onRefreshToken: function () {
+            return ''
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
